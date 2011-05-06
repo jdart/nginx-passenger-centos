@@ -96,8 +96,10 @@ export DESTDIR=%{buildroot}
     --lock-path=%{_localstatedir}/lock/subsys/%{nginx_name} \
     --with-http_ssl_module \
     --with-http_gzip_static_module \
-    --with-mail \
-    --with-mail_ssl_module \
+    --with-http_realip_module
+    --with-http_addition_module
+    --with-http_sub_module
+    --with-http_stub_status_module
     --with-ipv6 \
     --add-module=`passenger-config --root`/ext/nginx
 make %{?_smp_mflags}
