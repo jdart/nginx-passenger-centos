@@ -12,7 +12,7 @@
 
 Name:           nginx-passenger
 Version:        %{nginx_version}+%{passenger_version}
-Release:        %{?dist}
+Release:        2%{?dist}
 Summary:        Robust, small and high performance http and reverse proxy server
 Group:          System Environment/Daemons
 
@@ -172,6 +172,10 @@ fi
 %config(noreplace) %{nginx_confdir}/fastcgi_params.default
 %config(noreplace) %{nginx_confdir}/koi-win
 %config(noreplace) %{nginx_confdir}/koi-utf
+%config(noreplace) %{nginx_confdir}/scgi_params
+%config(noreplace) %{nginx_confdir}/scgi_params.default
+%config(noreplace) %{nginx_confdir}/uwsgi_params
+%config(noreplace) %{nginx_confdir}/uwsgi_params.default
 %config(noreplace) %{nginx_confdir}/%{nginx_name}.conf
 %config(noreplace) %{nginx_confdir}/mime.types
 %config(noreplace) %{_sysconfdir}/logrotate.d/%{nginx_name}
