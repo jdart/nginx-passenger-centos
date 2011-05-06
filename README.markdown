@@ -17,7 +17,7 @@ Perform the following on a build box as root.
 ## Install Prerequisites for Nginx + Passenger RPM Creation
     yum groupinstall 'Development Tools'
     yum install ruby-devel openssl-devel zlib-devel pcre-devel rubygems git
-    gem install passenger -v 2.2.11
+    gem install passenger -v 3.0.7 
 
 Hereafter, this process assumes that `passenger-config --root` returns a
 usable value for the location of Passenger's installed files. The RPM will
@@ -30,7 +30,7 @@ present at runtime for the nginx integration to work correctly.
 
 ## Download Nginx
     cd ~/rpmbuild
-    curl http://nginx.org/download/nginx-0.7.65.tar.gz -o SOURCES/nginx-0.7.65.tar.gz
+    wget http://nginx.org/download/nginx-1.0.1.tar.gz SOURCES/
 
 ## Get Necessary System-specific Configs
     cd /tmp
@@ -44,4 +44,4 @@ present at runtime for the nginx integration to work correctly.
 
 The resulting RPM will be:
 
-    ~/rpmbuild/RPMS/x86_64/nginx-passenger-0.7.65+2.2.11-2.x86_64.rpm
+    ~/rpmbuild/RPMS/x86_64/nginx-passenger-1.0.1+3.0.7-2.x86_64.rpm
