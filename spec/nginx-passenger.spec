@@ -1,5 +1,5 @@
 %define nginx_name      nginx
-%define nginx_version   1.2.2
+%define nginx_version   1.4.7
 %define nginx_user      nginx
 %define nginx_group     %{nginx_user}
 %define nginx_home      %{_localstatedir}/lib/nginx
@@ -8,7 +8,7 @@
 %define nginx_confdir   %{_sysconfdir}/nginx
 %define nginx_datadir   %{_datadir}/nginx
 %define nginx_webroot   %{nginx_datadir}/html
-%define passenger_version   3.0.13
+%define passenger_version  4.0.38
 
 Name:           nginx-passenger
 Version:        %{nginx_version}+%{passenger_version}
@@ -187,6 +187,9 @@ fi
 
 
 %changelog
+* Wed Mar  19 2014 Brendan Doyle - 1.4.7-1
+- updated to latest stable
+
 * Fri Jul  6 2012 Eugene Vilensky - 1.2.2-2
 - updated to latest stable
 
