@@ -8,7 +8,7 @@
 %define nginx_confdir   %{_sysconfdir}/nginx
 %define nginx_datadir   %{_datadir}/nginx
 %define nginx_webroot   %{nginx_datadir}/html
-%define passenger_version  4.0.38
+%define passenger_version  4.0.40
 
 Name:           nginx-passenger
 Version:        %{nginx_version}+%{passenger_version}
