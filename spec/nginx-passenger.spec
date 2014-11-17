@@ -1,5 +1,5 @@
 %define nginx_name      nginx
-%define nginx_version   1.4.7
+%define nginx_version   1.6.2
 %define nginx_user      nginx
 %define nginx_group     %{nginx_user}
 %define nginx_home      %{_localstatedir}/lib/nginx
@@ -8,7 +8,7 @@
 %define nginx_confdir   %{_sysconfdir}/nginx
 %define nginx_datadir   %{_datadir}/nginx
 %define nginx_webroot   %{nginx_datadir}/html
-%define passenger_version  4.0.40
+%define passenger_version  4.0.53
 
 Name:           nginx-passenger
 Version:        %{nginx_version}+%{passenger_version}
